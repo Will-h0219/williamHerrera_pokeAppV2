@@ -1,0 +1,69 @@
+.add-icon {
+  &::after,
+  &::before {
+    mask: url('../assets/icons/add-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/icons/add-icon.svg') no-repeat 50% 50%;
+    mask-size: 16px;
+    -webkit-mask-size: 16px;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    width: 16px;
+    height: 13px;
+  }
+}
+
+.save-icon {
+  &::after,
+  &::before {
+    mask: url('../assets/icons/save-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/icons/save-icon.svg') no-repeat 50% 50%;
+    mask-size: 14px;
+    -webkit-mask-size: 14px;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    width: 16px;
+    height: 13px;
+  }
+}
+
+.cancel-icon {
+  &::after,
+  &::before {
+    mask: url('../assets/icons/cancel-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/icons/cancel-icon.svg') no-repeat 50% 50%;
+    mask-size: 17px;
+    -webkit-mask-size: 17px;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    width: 16px;
+    height: 13px;
+  }
+}
+
+.delete-icon {
+  &::after,
+  &::before {
+    mask: url('../assets/icons/delete-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/icons/delete-icon.svg') no-repeat 50% 50%;
+    mask-size: 16px;
+    -webkit-mask-size: 16px;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    width: 16px;
+    height: 13px;
+  }
+}
+
+.edit-icon {
+  &::after,
+  &::before {
+    mask: url('../assets/icons/edit-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/icons/edit-icon.svg') no-repeat 50% 50%;
+    mask-size: 15px;
+    -webkit-mask-size: 15px;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    width: 16px;
+    height: 13px;
+  }
+}

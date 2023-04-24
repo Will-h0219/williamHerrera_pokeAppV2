@@ -1,0 +1,22 @@
+<section class="main">
+  <p><strong>Listado de Pokemon</strong></p>
+
+  <ng-container *ngIf="error$ | async">
+    <div class="error">Ocurrio un errror inesperado, intenta nuevamente más tarde</div>
+  </ng-container>
+
+  <div class="search">
+    <app-search-bar (onSearch)="setPokemon($event)"></app-search-bar>
+
+    <button
+      class="btn icon__start add-icon"
+      (click)="setNew()"
+    >
+      Nuevo
+    </button>
+  </div>
+
+  <app-list [pokemon]="pokemon"></app-list>
+
+  <app-add-pokemon (onSave)="setPokemon($event)"></app-add-pokemon>
+</section>

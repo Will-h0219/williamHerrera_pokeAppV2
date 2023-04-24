@@ -1,0 +1,20 @@
+.wrapper {
+  margin-bottom: 16px;
+
+  .headers {
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+
+    .col {
+      flex: 1;
+      text-align: center;
+      border: solid 1px #e2e6ea;
+      padding: 12px;
+    }
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  width: 100%;
+
+  .col {
+    flex: 1;
+    border: solid 1px #e2e6ea;
+    padding: 12px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+div {
+  box-sizing: border-box;
+}

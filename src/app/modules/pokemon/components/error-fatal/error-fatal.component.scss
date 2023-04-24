@@ -1,0 +1,32 @@
+.wrapper {
+  margin: 24px auto;
+  width: min-content;
+  border: #ff3939 3px solid;
+  border-radius: 15px;
+
+  .title {
+    background-color: #ff3939;
+    margin: 0;
+    padding: 16px;
+    color: #f0f0f0;
+    border-radius: 12px 12px 0 0;
+  }
+
+  img {
+    border-radius: 0 0 12px 12px;
+    transform: translateY(4px);
+  }
+
+  p {
+    padding: 0 16px;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    text-decoration: none;
+  }
+}

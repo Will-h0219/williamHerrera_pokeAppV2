@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col">{{ pokemon.name }} - {{ pokemon.id }}</div>
+  <div class="col">
+    <img [src]=pokemon.image [alt]=pokemon.name>
+  </div>
+  <div class="col center">{{ pokemon.attack }}</div>
+  <div class="col center">{{ pokemon.defense }}</div>
+  <div class="col actions">
+    <button
+      class="btn icon__start edit-icon"
+      (click)="edit()"
+    ></button>
+
+    <button
+      class="btn icon__start delete-icon"
+      (click)="delete()"
+    ></button>
+  </div>
+</div>

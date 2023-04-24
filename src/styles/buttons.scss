@@ -1,0 +1,30 @@
+.btn {
+  background-color: #6658f4;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+
+  &:disabled {
+    background-color: #cfcbfd;
+    pointer-events: none;
+  }
+}
+
+.icon {
+  &__start {
+    &::before {
+      content: "";
+      display: inline-block;
+    }
+  }
+
+  &__end {
+    &::after {
+      content: "";
+      display: inline-block;
+    }
+  }
+}

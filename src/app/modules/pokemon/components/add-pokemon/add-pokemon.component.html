@@ -1,0 +1,110 @@
+<section class="wrapper">
+  <div class="title">{{ pokemon ? 'Editar pokemon' : 'Nuevo pokemon' }}</div>
+
+  <form [formGroup]="addPokemonForm">
+    <div class="row">
+      <div class="form__group">
+        <input
+          class="form__field"
+          type="text"
+          id="name"
+          placeholder="Nombre"
+          formControlName="name"
+        >
+
+        <label
+          class="form__label"
+          for="name"
+        >
+          Nombre
+        </label>
+      </div>
+
+      <div class="range-field">
+        <label for="attack">Ataque: </label>
+
+        <input
+          type="range"
+          id="attack"
+          min="0"
+          max="100"
+          formControlName="attack"
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form__group">
+        <input
+          class="form__field"
+          type="text"
+          id="image"
+          placeholder="Imagen"
+          formControlName="image"
+        >
+
+        <label
+          class="form__label"
+          for="image"
+        >
+          Imagen
+        </label>
+      </div>
+
+      <div class="range-field">
+        <label for="defense">Defensa: </label>
+
+        <input
+          type="range"
+          id="defense"
+          min="0"
+          max="100"
+          formControlName="defense"
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form__group">
+        <select class="form__field" formControlName="type">
+          <option selected disabled value="">Elige un tipo</option>
+
+          <ng-container *ngFor="let type of constants.types">
+            <option [value]="type.value">{{ type.value }}</option>
+          </ng-container>
+        </select>
+      </div>
+
+      <div class="range-field">
+        <label for="hp">Vida: </label>
+
+        <input
+          type="range"
+          id="hp"
+          min="0"
+          max="100"
+          formControlName="hp"
+        >
+      </div>
+    </div>
+
+    <div class="actions">
+      <button
+        type="submit"
+        class="btn icon__start save-icon"
+        [disabled]="addPokemonForm.invalid"
+        (click)="save()"
+      >
+        Guardar
+      </button>
+
+      <button
+        type="button"
+        class="btn icon__start cancel-icon"
+        (click)="cancel()"
+      >
+        Cancelar
+      </button>
+    </div>
+  </form>
+</section>

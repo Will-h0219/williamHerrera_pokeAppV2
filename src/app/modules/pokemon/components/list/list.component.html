@@ -1,0 +1,19 @@
+<section class="wrapper" *ngIf="pokemon">
+  <div class="headers">
+    <div class="col">Nombre</div>
+    <div class="col">Imagen</div>
+    <div class="col">Ataque</div>
+    <div class="col">Defensa</div>
+    <div class="col">Acciones</div>
+  </div>
+
+  <ng-container *ngFor="let pokemon of pokemonList">
+    <app-list-item [pokemon]="pokemon" (onDelete)="removeItem($event)"></app-list-item>
+  </ng-container>
+
+  <app-list-item
+    [pokemon]="pokemon"
+    (onDelete)="removeItem($event)"
+  ></app-list-item>
+
+</section>
