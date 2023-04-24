@@ -7,10 +7,6 @@
     <div class="col">Acciones</div>
   </div>
 
-  <ng-container *ngFor="let pokemon of pokemonList">
-    <app-list-item [pokemon]="pokemon" (onDelete)="removeItem($event)"></app-list-item>
-  </ng-container>
-
   <app-list-item
     [pokemon]="pokemon"
     (onDelete)="removeItem($event)"

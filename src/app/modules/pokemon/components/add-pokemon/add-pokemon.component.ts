@@ -38,9 +38,7 @@ export class AddPokemonComponent implements OnInit, OnDestroy {
   save() {
     if (!this.pokemon) {
       this.pokemonService.createPokemon(this.addPokemonForm.value).subscribe({
-        next: (resp) => {
-          this.handleSave(resp);
-        }
+        next: (resp) => this.handleSave(resp)
       });
     } else {
       this.pokemonService.updatePokemon(this.pokemon.id!, this.addPokemonForm.value).subscribe({

@@ -20,4 +20,21 @@ describe('ListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('Remove item', () => {
+    let fakeId = 1;
+    let fakePokemon = {
+      id: fakeId
+    } as any;
+
+    beforeEach(() => {
+      component.pokemon = fakePokemon;
+    });
+
+    it('Debe remover el pokemon si el id coincide', () => {
+      component.removeItem(fakeId);
+
+      expect(component.pokemon).toBeFalsy();
+    });
+  });
 });

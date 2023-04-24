@@ -17,9 +17,7 @@ export class ListItemComponent {
 
   delete() {
     this.pokemonService.deletePokemon(this.pokemon.id!).subscribe({
-      next: (resp) => {
-        this.onDelete.emit(this.pokemon.id);
-      }
+      next: () => this.onDelete.emit(this.pokemon.id)
     });
   }
 

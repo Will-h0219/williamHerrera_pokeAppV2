@@ -13,11 +13,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class SearchBarComponent implements OnInit {
   @Output() onSearch: EventEmitter<Pokemon | null> = new EventEmitter();
   searchForm!: FormGroup;
-  noResults: boolean = false;
-
-  get controls() {
-    return this.searchForm.controls;
-  }
 
   constructor(
     private pokemonService: PokemonService,
@@ -33,19 +28,9 @@ export class SearchBarComponent implements OnInit {
       return;
     }
     this.pokemonService.getPokemon(this.searchForm.value.searchField)
-      .pipe(
-        tap(() => this.noResults = false)
-      )
       .subscribe({
-        next: (resp) => {
-          this.onSearch.emit(resp);
-        },
-        error: (err) => {
-          if (err.status === 404) {
-            this.noResults = true;
-            this.onSearch.emit(null);
-          }
-        }
+        next: (resp) => this.onSearch.emit(resp),
+        error: () => this.onSearch.emit(null)
       });
   }
 

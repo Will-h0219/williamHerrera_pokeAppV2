@@ -7,7 +7,6 @@ import { Pokemon } from '../../interfaces/pokemon.interface';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input() pokemonList: Pokemon[] = [];
   @Input() pokemon: Pokemon | null = null;
 
   removeItem(id: number) {
