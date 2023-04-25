@@ -1,0 +1,8 @@
+$small-screen: 460px;
+
+// Breakpoint from 461px or greater
+@mixin sm-screen {
+  @media (min-width: #{$small-screen}) {
+      @content;
+  }
+}

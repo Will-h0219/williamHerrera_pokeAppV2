@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col">{{ pokemon.name }} - {{ pokemon.id }}</div>
-  <div class="col">
+  <div class="col name">{{ pokemon.name }} - {{ pokemon.id }}</div>
+  <div class="col image">
     <img [src]=pokemon.image [alt]=pokemon.name>
   </div>
-  <div class="col center">{{ pokemon.attack }}</div>
-  <div class="col center">{{ pokemon.defense }}</div>
-  <div class="col actions">
+  <div class="col center attack">{{ pokemon.attack }}</div>
+  <div class="col center defense">{{ pokemon.defense }}</div>
+  <div class="col actions actions">
     <button
       class="btn icon__start edit-icon"
       (click)="edit()"

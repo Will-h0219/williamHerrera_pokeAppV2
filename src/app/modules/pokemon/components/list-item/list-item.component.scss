@@ -1,6 +1,33 @@
+@import '../../../../../styles/medias.scss';
+
 .row {
-  display: flex;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(auto-fit, 1fr));
+  grid-template-areas:
+    "name name name"
+    "image image image"
+    "attack defense actions";
+  @include sm-screen() {
+    display: flex;
+    width: 100%;
+  }
+
+  .name {
+    grid-area: name;
+  }
+  .image {
+    grid-area: image;
+  }
+  .attack {
+    grid-area: attack;
+  }
+  .defense {
+    grid-area: defense;
+  }
+  .actions {
+    grid-area: actions;
+  }
 
   .col {
     flex: 1;
@@ -23,7 +50,12 @@
 
   .actions {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 12px 4px;
+    @include sm-screen() {
+      justify-content: space-around;
+      padding: 12px;
+    }
   }
 }
 

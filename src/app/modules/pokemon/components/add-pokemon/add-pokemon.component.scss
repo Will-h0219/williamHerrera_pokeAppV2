@@ -1,3 +1,5 @@
+@import '../../../../../styles/medias.scss';
+
 .wrapper {
   padding: 16px 22px;
   border: solid 1px #e2e6ea;
@@ -11,13 +13,27 @@
 
   .row {
     display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
     justify-content: space-between;
     align-content: center;
+    @include sm-screen() {
+      padding: 0 5em;
+    }
+
+    .form__group, .range-field {
+      width: 100%;
+      @include sm-screen() {
+        width: 20%;
+      }
+    }
   }
 
   .range-field {
     align-self: flex-end;
     padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .actions {
